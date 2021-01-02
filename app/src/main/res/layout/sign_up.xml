@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bgColor"
-    tools:context=".SignIn">
+    tools:context=".SignUp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_arrow"
@@ -23,15 +22,15 @@
         android:layout_height="100dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back_arrow"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textSize="50sp"
         android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/input_email"
-        android:drawableLeft="@drawable/email_ioon"
+        android:id="@+id/input_first_name"
+        android:drawableLeft="@drawable/person_icon"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/edittext_bg"
@@ -48,8 +47,44 @@
         android:paddingLeft="20dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/input_last_name"
+    android:drawableLeft="@drawable/person_icon"
+    android:layout_marginStart="40dp"
+    android:layout_marginEnd="40dp"
+    android:background="@drawable/edittext_bg"
+    android:layout_width="match_parent"
+    android:paddingStart="20dp"
+    android:layout_height="60dp"
+    android:drawablePadding="10dp"
+    android:hint="Email"
+    android:layout_marginTop="20dp"
+    android:textColorHint="#A49F9F"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/input_first_name"
+    android:paddingLeft="20dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input_email"
+        android:drawableLeft="@drawable/email_ioon"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:layout_height="60dp"
+        android:drawablePadding="10dp"
+        android:hint="Email Address"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#A49F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_last_name"
+        android:paddingLeft="20dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/input_password"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/eye"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
@@ -65,11 +100,31 @@
         app:layout_constraintTop_toBottomOf="@id/input_email"
         android:paddingLeft="20dp" />
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input_password2"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/eye"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"
+        android:layout_height="60dp"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:textColorHint="#A49F9F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_password"
+        android:paddingLeft="20dp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sign_in"
         android:background="@drawable/btn_bg"
-        android:layout_margin="40dp"
-        android:text="Log In"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Sign Up"
         android:textSize="28sp"
         android:textAllCaps="false"
         android:textColor="@color/bgColor"
@@ -77,23 +132,8 @@
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_password"
+        app:layout_constraintTop_toBottomOf="@id/input_password2"
         android:textStyle="bold"
-        android:fontFamily="@font/open_sans_regular"/>
-
-    <TextView
-        android:id="@+id/text5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forget Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sign_in"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginEnd="40dp"
-        android:textColor="#002147"
-        android:layout_marginRight="60dp" />
-
-
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_marginLeft="40dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
