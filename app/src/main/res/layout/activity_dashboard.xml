@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgColor"
     tools:context=".Dashboard">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
   <androidx.appcompat.widget.AppCompatImageView
       android:id="@+id/menu_bar"
@@ -32,7 +36,7 @@
       android:layout_height="wrap_content"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/menu_bar"
-      android:text="Dashboard"
+      android:text="@string/dashboard"
       android:textSize="40sp"
       android:layout_marginStart="60dp"
       android:layout_marginLeft="40dp" />
@@ -53,7 +57,7 @@
           android:id="@+id/text1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Energy Usage"
+          android:text="@string/energy_usage"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           android:layout_marginTop="16dp"
@@ -80,12 +84,14 @@
             android:id="@+id/energy_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="96"
+            android:text="@string/_96"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:textSize="30sp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            tools:ignore="RelativeOverlap" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/text2"
@@ -95,16 +101,17 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="14dp"
-            android:text="KWh"
+            android:text="@string/kwh"
             android:textColor="@color/bgColor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:layout_alignStart="@id/energy_value" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view_bt"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/view_bg"
-            android:text="View Chart"
+            android:text="@string/view_chart"
             android:textSize="8sp"
             android:layout_alignParentRight="true"
             android:textColor="#0F4D92"
@@ -114,14 +121,17 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="20dp"
             android:layout_marginTop="8dp"
-            />
+            tools:ignore="SmallSp"
+            android:layout_alignParentEnd="true"
+            android:drawableEnd="@drawable/view_bt"
+            android:layout_marginEnd="20dp" />
       </RelativeLayout>
 
       <TextView
           android:id="@+id/text3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Uptime"
+          android:text="@string/uptime"
           app:layout_constraintTop_toBottomOf="@id/parentView1"
           app:layout_constraintStart_toStartOf="parent"
           android:layout_marginTop="4dp"
@@ -148,31 +158,34 @@
             android:id="@+id/time_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120"
+            android:text="@string/_120"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:textSize="30sp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            tools:ignore="RelativeOverlap" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:textColor="@color/bgColor"
             android:id="@+id/text4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Days"
+            android:text="@string/days"
             android:layout_marginStart="60dp"
             android:layout_alignLeft="@id/time_value"
             android:layout_marginTop="14dp"
             android:textSize="24sp"
-            android:layout_marginLeft="60dp" />
+            android:layout_marginLeft="60dp"
+            android:layout_alignStart="@id/time_value" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view_time_bt"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:background="@drawable/view_bg"
-            android:text="View Chart"
+            android:text="@string/view_chart"
             android:textSize="8sp"
             android:layout_alignParentRight="true"
             android:textColor="#0F4D92"
@@ -182,7 +195,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="20dp"
             android:layout_marginTop="8dp"
-            />
+            android:layout_marginEnd="20dp"
+            android:drawableEnd="@drawable/view_bt"
+            android:layout_alignParentEnd="true"
+            tools:ignore="SmallSp" />
       </RelativeLayout>
 
       <androidx.cardview.widget.CardView
@@ -277,19 +293,18 @@
             android:layout_height="match_parent">
 
           <androidx.appcompat.widget.AppCompatTextView
-              android:textColor="#000000"
               android:id="@+id/energy_value2"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="96"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintEnd_toStartOf="@id/view1"
-              app:layout_constraintTop_toTopOf="parent"
+              android:layout_width="19dp"
+              android:layout_height="22dp"
               android:layout_marginStart="44dp"
+              android:layout_marginLeft="44dp"
               android:layout_marginTop="10dp"
-              android:layout_marginBottom="10dp"
+              android:text="@string/_96"
+              android:textColor="#000000"
               android:textSize="22sp"
-              android:layout_marginLeft="44dp" />
+              app:layout_constraintEnd_toStartOf="@id/view1"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
 
           <androidx.appcompat.widget.AppCompatTextView
               android:id="@+id/text5"
@@ -320,20 +335,21 @@
               android:id="@+id/time_val"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="120"
+              android:text="@string/_120"
               android:layout_marginTop="16dp"
               app:layout_constraintEnd_toStartOf="@id/view2"
               app:layout_constraintStart_toEndOf="@id/view1"
               app:layout_constraintTop_toTopOf="parent"
 
               android:textSize="22sp"
-              android:layout_marginLeft="40dp" />
+              android:layout_marginLeft="40dp"
+              android:layout_marginStart="40dp" />
 
           <androidx.appcompat.widget.AppCompatTextView
               android:id="@+id/text6"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Days"
+              android:text="@string/days"
               android:textColor="#002147"
               android:textSize="16sp"
               app:layout_constraintEnd_toStartOf="@id/view2"
@@ -359,7 +375,7 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginTop="16dp"
-              android:text="33"
+              android:text="@string/_33"
               android:textColor="#000000"
               android:textSize="22sp"
               app:layout_constraintEnd_toEndOf="parent"
@@ -371,7 +387,7 @@
               android:id="@+id/text7"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Customers"
+              android:text="@string/customers"
               android:textColor="#002147"
               android:textSize="14sp"
               app:layout_constraintStart_toEndOf="@id/view2"
@@ -389,7 +405,7 @@
 
 
 
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

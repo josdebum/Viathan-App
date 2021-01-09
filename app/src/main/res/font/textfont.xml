@@ -3,6 +3,6 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@fon" />
+        android:font="@font/open_sans_light" />
 
 </font-family>
