@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgColor"
-    tools:context=".Dashboard">
+    >
 
   <ScrollView
       android:layout_width="match_parent"
@@ -320,6 +320,7 @@
               android:text="KWh"
               android:textColor="#002147"
               android:textSize="16sp"
+              android:layout_marginTop="10dp"
               app:layout_constraintEnd_toStartOf="@id/view1"
               app:layout_constraintStart_toStartOf="parent"
               app:layout_constraintTop_toBottomOf="@id/energy_value2" />
@@ -359,6 +360,7 @@
               android:text="@string/days"
               android:textColor="#002147"
               android:textSize="16sp"
+              android:layout_marginTop="10dp"
               app:layout_constraintEnd_toStartOf="@id/view2"
               app:layout_constraintStart_toEndOf="@id/view1"
               app:layout_constraintTop_toBottomOf="@id/energy_value2" />
@@ -368,7 +370,6 @@
               android:layout_marginBottom="10dp"
               android:background="#C4C4C4"
               android:id="@+id/view2"
-
               app:layout_constraintStart_toEndOf="@id/time_val"
               android:layout_width="2dp"
               android:layout_height="50dp"
@@ -397,6 +398,7 @@
               android:text="@string/customers"
               android:textColor="#002147"
               android:textSize="14sp"
+              android:layout_marginTop="10dp"
               app:layout_constraintStart_toEndOf="@id/view2"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintTop_toBottomOf="@id/energy_value2" />
