@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view"
+
     >
 
     
@@ -10,29 +11,29 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
-            android:title="@string/menu_home" />
+            android:title="Dashboard" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/geothermal"
-            android:title="@string/menu_gallery" />
+            android:title="Power Plant" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/chat"
-            android:title="@string/menu_slideshow" />
+            android:title="Messages" />
 
         <item
             android:id="@+id/nav_customer"
             android:icon="@drawable/customer"
-            android:title="@string/menu_slideshow" />
+            android:title="Customers" />
 
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/about_us"
-            android:title="@string/menu_slideshow" />
+            android:title="About us" />
 
         <item
             android:id="@+id/nav_privacy"
             android:icon="@drawable/privacy"
-            android:title="@string/menu_slideshow" />
+            android:title="Privacy Policy" />
     </group>
 </menu>
