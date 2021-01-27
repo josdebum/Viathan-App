@@ -12,6 +12,6 @@ class SignIn : AppCompatActivity() {
 
 
     log_in.setOnClickListener(){
-        startActivity(Intent (this, Dashboard:: class.java))
+        startActivity(Intent (this, NavigationActivity:: class.java))
     }
 }}
