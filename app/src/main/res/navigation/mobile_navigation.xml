@@ -3,23 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_dashboard">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.viathanapp.ui.home.DashboardFragment"
-        android:label="@string/menu_home"
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.viathanapp.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.viathanapp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_power_plants"
+        android:name="com.example.viathanapp.ui.power_plants.PowerPlantsFragment"
+        android:label="Power Plants"
+        tools:layout="@layout/fragment_power_plants" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.viathanapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_messages"
+        android:name="com.example.viathanapp.ui.messages.MessagesFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_messages" />
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="com.example.viathanapp.ui.customers.CustomersFragment"
+        android:label="Customers"
+        tools:layout="@layout/fragment_customers" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.viathanapp.ui.about_us.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="com.example.viathanapp.ui.policy_privacy.PrivacyPolicyFragment"
+        android:label="Privacy Policy"
+        tools:layout="@layout/fragment_privacy_policy" />
 </navigation>
