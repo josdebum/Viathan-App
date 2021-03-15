@@ -8,24 +8,51 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.viathanapp.R
+import kotlinx.android.synthetic.main.fragment_messages.*
 
 class MessagesFragment : Fragment() {
 
-    private lateinit var messagesViewModel: MessagesViewModel
+    private var mAdapter: MessagesListAdapter? = null
+    private var messageList: ArrayList<Messages>? = arrayListOf()
+    // private var layoutManager: RecyclerView.LayoutManager? = null
+
+    private var mLayoutManager: RecyclerView.LayoutManager? = null
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+
+
+
+        }
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        messagesViewModel =
-            ViewModelProviders.of(this).get(MessagesViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_messages, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        messagesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+
+        // Inflate the layout for this fragment
+
+        // messageList = ArrayList<Messages>()
+        mLayoutManager = LinearLayoutManager(this.context)
+        mAdapter = this.context?.let { MessagesListAdapter(messageList!!, it) }
+
+        return inflater.inflate(R.layout.fragment_messages, container, false)
+
+
     }
-}
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        messages.apply {
+            layoutManager = mLayoutManager
+            adapter = mAdapter
+            messageList!!.add(Messages("Alex Marchal", "I have some questions about...", 12,
+                2, R.drawable.josdebum))
+        }}  }

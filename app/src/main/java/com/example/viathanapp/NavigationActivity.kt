@@ -19,9 +19,14 @@ import kotlinx.android.synthetic.main.activity_navigation.*
 
 class NavigationActivity : AppCompatActivity() {
 
-    private lateinit var toggle: ActionBarDrawerToggle
-
     private lateinit var appBarConfiguration: AppBarConfiguration
+
+//    private lateinit var toggle: ActionBarDrawerToggle
+//    val navController = findNavController(R.id.nav_host_fragment)
+//    val drawerLayout: DrawerLayout? = findViewById(R.id.drawer_layout)
+//
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,14 +37,13 @@ class NavigationActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-
-
-//            Snackbar.make(view, "Ren place with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
+          Snackbar.make(view, "Ren place with your own action", Snackbar.LENGTH_LONG)
+               .setAction("Action", null).show()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -53,46 +57,40 @@ class NavigationActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        val retValue = super.onCreateOptionsMenu(menu)
-        val navigationView = findViewById<NavigationView>(R.id.nav_view)
-        if (navigationView == null) {
-            //android needs to know what menu I need
-            menuInflater.inflate(R.menu.activity_main_drawer, menu)
-            return true
-        }
-        return retValue
+        menuInflater.inflate(R.menu.activity_main_drawer, menu)
+        return true
     }
 
-    private fun setupActionBar(
-        navController: NavController,
-        appBarConfig: AppBarConfiguration
-    ) {
-        setupActionBarWithNavController(navController, appBarConfig)
-    }    private fun setupNavigation(navController: NavController) {
-        val sideNavView = findViewById<NavigationView>(R.id.nav_view)
-        sideNavView?.setupWithNavController(navController)
-        val drawerLayout: DrawerLayout? = findViewById(R.id.drawer_layout)
-
-        //fragments load from here but how ?
-        appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_dashboard, R.id.nav_power_plants),
-            drawerLayout
-        )
-    }
+//    private fun setupActionBar(
+//        navController: NavController,
+//        appBarConfig: AppBarConfiguration
+//    ) {
+//        setupActionBarWithNavController(navController, appBarConfig)
+//    }    private fun setupNavigation(navController: NavController) {
+//        val sideNavView = findViewById<NavigationView>(R.id.nav_view)
+//        sideNavView?.setupWithNavController(navController)
+//        val drawerLayout: DrawerLayout? = findViewById(R.id.drawer_layout)
+//
+//        //fragments load from here but how ?
+//        appBarConfiguration = AppBarConfiguration(
+//            setOf(R.id.nav_dashboard, R.id.nav_power_plants),
+//            drawerLayout
+//        )
+//    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //I need to open the drawer onClick
-        when (item!!.itemId) {
-            R.id.nav_dashboard ->
-                drawer_layout.openDrawer(GravityCompat.START)
-        }
-        return true
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        //I need to open the drawer onClick
+//        when (item!!.itemId) {
+//            R.id.nav_dashboard ->
+//                drawer_layout.openDrawer(GravityCompat.START)
+//        }
+//        return true
+//    }
 
     override fun onBackPressed() {
         //the code is beautiful enough without comments
@@ -102,6 +100,17 @@ class NavigationActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//
+//            R.id.nav_dashboard -> {
+//                navController.popBackStack(R.id.nav_dashboard, false)
+//            }
+//
+//        }
+//        drawerLayout?.closeDrawer(GravityCompat.START)
+//        return true}
 
 
 }
