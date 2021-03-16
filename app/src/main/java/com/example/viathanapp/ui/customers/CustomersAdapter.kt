@@ -19,7 +19,7 @@ private val context: Context
         fun bindItem(customers: Customers) {
             var centre: TextView = itemView.findViewById(R.id.centre) as TextView
             var message: TextView = itemView.findViewById(R.id.message) as TextView
-            var typeL: TextView = itemView.findViewById(R.id.type) as TextView
+           // var type: TextView = itemView.findViewById(R.id.type) as TextView
             var ppicture: ImageView = itemView.findViewById(R.id.ppicture) as ImageView
 
 

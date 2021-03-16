@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.viathanapp.R
 import com.example.viathanapp.ui.messages.Messages
 import com.example.viathanapp.ui.messages.MessagesListAdapter
+import kotlinx.android.synthetic.main.fragment_customers.*
 import kotlinx.android.synthetic.main.fragment_messages.*
 
 
@@ -49,7 +50,7 @@ class CustomersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        messages.apply {
+        customers.apply {
             layoutManager = mLayoutManager
             adapter = mAdapter
             customerList!!.add(
