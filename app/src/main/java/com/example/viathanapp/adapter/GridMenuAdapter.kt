@@ -1,4 +1,4 @@
-package com.example.viathanapp
+package com.example.viathanapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.viathanapp.R
 
 import kotlinx.android.synthetic.main.item_menu.view.*
 

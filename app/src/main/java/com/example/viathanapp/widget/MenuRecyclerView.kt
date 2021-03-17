@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.github.rifqimfahmi.softkeyboard.adapter.GridMenuAdapter
+import com.example.viathanapp.adapter.GridMenuAdapter
 import com.github.rifqimfahmi.softkeyboard.widget.decoration.MenuGridDecoration
 
 class MenuRecyclerView : RecyclerView {

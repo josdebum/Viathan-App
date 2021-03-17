@@ -1,4 +1,4 @@
-package com.github.rifqimfahmi.softkeyboard.widget
+package com.example.viathanapp.widget
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,10 +11,12 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.PopupWindow
 import androidx.core.animation.addListener
-import com.github.rifqimfahmi.softkeyboard.R
-import com.github.rifqimfahmi.softkeyboard.adapter.GridMenuAdapter
+import com.example.viathanapp.adapter.GridMenuAdapter
+//import com.github.rifqimfahmi.softkeyboard.R
 import com.github.rifqimfahmi.softkeyboard.util.toPx
 import kotlin.math.sqrt
+import com.example.viathanapp.R
+import com.github.rifqimfahmi.softkeyboard.widget.MenuRecyclerView
 
 class SoftKeyBoardPopup(
     private val context: Context,
@@ -43,6 +45,7 @@ class SoftKeyBoardPopup(
         initMenuView()
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun initConfig() {
         softInputMode = LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE
         setSize(LayoutParams.MATCH_PARENT, keyboardHeight)

@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.PopupWindow
 
 
+@SuppressLint("AppCompatCustomView")
 class MenuEditText : EditText {
 
     var popupListener: PopupListener? = null

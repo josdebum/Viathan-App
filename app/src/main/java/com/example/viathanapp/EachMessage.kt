@@ -3,15 +3,12 @@ package com.example.viathanapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.PopupWindow
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.github.rifqimfahmi.softkeyboard.widget.MenuEditText
-import com.github.rifqimfahmi.softkeyboard.widget.SoftKeyBoardPopup
+import com.example.viathanapp.widget.SoftKeyBoardPopup
 import kotlinx.android.synthetic.main.activity_each_message.*
 import kotlinx.android.synthetic.main.activity_each_message.menuChatContainer
 
@@ -26,7 +23,7 @@ class EachMessage : AppCompatActivity() , MenuEditText.PopupListener{
         setContentView(R.layout.activity_each_message)
 
         editText = findViewById(R.id.editText)
-
+        rootView = findViewById(R.id.rootView)
         editText.popupListener = this
 
         menuKeyboard = SoftKeyBoardPopup(
