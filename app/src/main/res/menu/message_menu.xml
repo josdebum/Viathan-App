@@ -5,17 +5,17 @@
 
 
     <item
-        android:id="@+id/agenda"
+        android:id="@+id/view_contact"
         android:icon="@android:drawable/ic_menu_agenda"
         android:orderInCategory="100"
-        android:title="Agenda"
+        android:title="View Contact"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/call"
+        android:id="@+id/search"
         android:icon="@android:drawable/ic_menu_call"
         android:orderInCategory="100"
-        android:title="Call"
+        android:title="Search"
          />
 
 
@@ -23,20 +23,20 @@
         android:id="@+id/add"
         android:icon="@android:drawable/ic_menu_add"
         android:orderInCategory="100"
-        android:title="Add"
+        android:title="Media, Links and Docs"
         />
 
     <item
         android:id="@+id/compass"
         android:icon="@android:drawable/ic_menu_compass"
         android:orderInCategory="100"
-        android:title="Compass"
+        android:title="Clear Chat"
         />
 
     <item
         android:id="@+id/day"
         android:orderInCategory="100"
-        android:title="Day"
+        android:title="Export Chat"
         />
 
 
