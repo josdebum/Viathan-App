@@ -10,13 +10,12 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_arrow"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:layout_margin="10dp"
         android:src="@drawable/back_arrw"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/branch_view"

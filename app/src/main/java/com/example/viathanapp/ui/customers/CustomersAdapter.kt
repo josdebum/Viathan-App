@@ -41,7 +41,7 @@ private val context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.message_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.customers_item, parent, false)
 
         return ViewHolder(view)
     }

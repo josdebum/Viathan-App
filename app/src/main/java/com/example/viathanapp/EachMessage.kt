@@ -69,10 +69,10 @@ class EachMessage : AppCompatActivity() , MenuEditText.PopupListener{
                     Log.d("API123", "done")
                     return true
                 }
-                R.id.call -> {
-                    Log.d("API123", "done")
-                    return true
-                }
+//                R.id.call -> {
+//                    Log.d("API123", "done")
+//                    return true
+//                }
                 R.id.day -> {
                     Log.d("API123", "done")
                     return true
@@ -82,10 +82,10 @@ class EachMessage : AppCompatActivity() , MenuEditText.PopupListener{
                     return true
                 }
 
-                R.id.agenda -> {
-                    Log.d("API123", "done")
-                    return true
-                }
+//                R.id.agenda -> {
+//                    Log.d("API123", "done")
+//                    return true
+//                }
 
                 else -> return super.onOptionsItemSelected(item)
             }
