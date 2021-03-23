@@ -263,8 +263,8 @@
                             >
 
                             <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_width="340dp"
+                                android:layout_height="wrap_content">
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/energy_value2"
@@ -284,17 +284,16 @@
                                     android:id="@+id/text5"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
                                     android:text="KWh"
                                     android:textColor="#002147"
                                     android:textSize="16sp"
-                                    android:layout_marginTop="10dp"
                                     app:layout_constraintEnd_toStartOf="@id/view1"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@id/energy_value2" />
 
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:id="@+id/view1"
-                                    android:src="@drawable/line"
                                     android:layout_width="2dp"
                                     android:layout_height="37dp"
                                     android:layout_marginStart="46dp"
@@ -302,33 +301,34 @@
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
                                     android:background="#C4C4C4"
+                                    android:src="@drawable/line"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toEndOf="@id/energy_value2"
                                     app:layout_constraintTop_toTopOf="parent" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
-                                    android:textColor="#000000"
                                     android:id="@+id/time_val"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="120"
+                                    android:layout_marginStart="40dp"
+                                    android:layout_marginLeft="40dp"
                                     android:layout_marginTop="16dp"
+                                    android:text="120"
+                                    android:textColor="#000000"
+                                    android:textSize="22sp"
+
                                     app:layout_constraintEnd_toStartOf="@id/view2"
                                     app:layout_constraintStart_toEndOf="@id/view1"
-                                    app:layout_constraintTop_toTopOf="parent"
-
-                                    android:textSize="22sp"
-                                    android:layout_marginLeft="40dp"
-                                    android:layout_marginStart="40dp" />
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:id="@+id/text6"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
                                     android:text="days"
                                     android:textColor="#002147"
                                     android:textSize="16sp"
-                                    android:layout_marginTop="10dp"
                                     app:layout_constraintEnd_toStartOf="@id/view2"
                                     app:layout_constraintStart_toEndOf="@id/view1"
                                     app:layout_constraintTop_toBottomOf="@id/energy_value2" />
@@ -341,8 +341,8 @@
                                     android:layout_marginLeft="34dp"
                                     android:layout_marginTop="10dp"
                                     android:layout_marginBottom="10dp"
-                                    android:src="@drawable/line"
                                     android:background="#C4C4C4"
+                                    android:src="@drawable/line"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toEndOf="@id/time_val"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -364,12 +364,12 @@
                                     android:id="@+id/text7"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
                                     android:text="customers"
                                     android:textColor="#002147"
                                     android:textSize="14sp"
-                                    android:layout_marginTop="10dp"
-                                    app:layout_constraintStart_toEndOf="@id/view2"
                                     app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/view2"
                                     app:layout_constraintTop_toBottomOf="@id/energy_value2" />
 
 

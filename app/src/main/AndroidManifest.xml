@@ -16,7 +16,7 @@
         <activity android:name=".Each_Customer" />
         <activity android:name=".MainActivity2" />
         <activity
-            android:name=".StatisticsScreen"
+            android:name=".MainActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".NavigationActivity"
@@ -26,7 +26,7 @@
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity
-            android:name=".MainActivity"
+            android:name=".StatisticsScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
